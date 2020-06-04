@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CommunityComponent } from './components/community/community.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { PromoComponent } from './components/promo/promo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     NavbarComponent,
     CommunityComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    PromoComponent
   ],
   imports: [
     BrowserModule,
