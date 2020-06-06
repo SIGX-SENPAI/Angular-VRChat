@@ -1,4 +1,7 @@
 .circle-home-icon {
-  width: 100px;
-  height: 100px;
+  height: 150px;
+  background-color: rgb(230, 230, 230);
+}
+.text-size-p{
+  font-size: 15px;
 }
