@@ -10,6 +10,7 @@ import { CommunityComponent } from './components/community/community.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { PromoComponent } from './components/promo/promo.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PromoComponent } from './components/promo/promo.component';
     CommunityComponent,
     LoginComponent,
     FooterComponent,
-    PromoComponent
+    PromoComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
