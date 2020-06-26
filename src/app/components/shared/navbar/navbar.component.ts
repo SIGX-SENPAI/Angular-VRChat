@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   @Output() showOut = new EventEmitter<boolean>();
+  @Output() showNav = new EventEmitter<boolean>();
+
   constructor( private router: Router ) { }
   flag = true;
   ngOnInit() {
@@ -20,6 +22,10 @@ export class NavbarComponent implements OnInit {
 
   NomostrarOutlet( f = false ) {
     this.showOut.emit(f);
+  }
+
+  NoMostrarNav( f = false ) {
+    this.showNav.emit(f);
   }
 
 }
