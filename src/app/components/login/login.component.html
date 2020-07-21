@@ -1,10 +1,11 @@
 <div class="login animate__animated animate__fadeIn">
 	<h1>Login</h1>
-    <form #f="ngForm">
+    <form (ngSubmit)="login( f )" #f="ngForm">
       <span *ngIf="f.submitted && f.controls['email'].errors" class="mb-1 text-danger">Usuario incorrecto</span>
       <input type="email"
               name="email"
               placeholder="email"
+              [(ngModel)]="user.email"
               required
               email
               />
@@ -12,6 +13,7 @@
         <input type="password"
               name="password"
               placeholder="password"
+              [(ngModel)]="user.password"
               required
               password />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>

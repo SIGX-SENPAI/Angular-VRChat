@@ -1,5 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { UserModel } from '../../models/user.model';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +12,9 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  constructor() {
+  user: UserModel = new UserModel();
+  remember = true;
+  constructor( private router: Router, private auth: AuthService) {
     document.body.style.background = 'rgb(104, 153, 216)';
     document.body.style.background = '-moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%)';
     document.body.style.background = '-webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%)';
@@ -19,10 +25,35 @@ export class LoginComponent implements OnInit, OnDestroy {
    }
 
   ngOnInit() { }
+
   ngOnDestroy() {
     document.body.style.background = '';
     document.body.style.filter = '';
 
+  }
+  login(form: NgForm) {
+    if ( form.invalid ) { return; }
+    Swal.fire({
+      allowOutsideClick: false,
+      icon: 'info',
+      text: 'Espere por favor...'
+    });
+    Swal.showLoading();
+    this.auth.login(this.user).subscribe(resp => {
+      console.log(resp);
+      Swal.close();
+      if ( this.remember ) {
+        localStorage.setItem('email', this.user.email);
+      }
+      this.router.navigateByUrl('/home');
+      }, (err) => {
+        console.log(err.error.error.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al autenticar',
+          text: err.error.error.message,
+        });
+      });
   }
 
 
