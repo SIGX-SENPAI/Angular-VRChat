@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit, OnDestroy {
 
   user: UserModel = new UserModel();
-  remember = true;
+  remember = false;
   constructor( private router: Router, private auth: AuthService) {
     document.body.style.background = 'rgb(104, 153, 216)';
     document.body.style.background = '-moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%)';
@@ -24,7 +24,13 @@ export class LoginComponent implements OnInit, OnDestroy {
     document.body.style.filter = 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#3E1D6D", endColorstr="#092756",GradientType=1 )';
    }
 
-  ngOnInit() { }
+   ngOnInit() {
+    if ( localStorage.getItem('email')) {
+      this.user.email = localStorage.getItem('email');
+      this.remember = true;
+    }
+  }
+
 
   ngOnDestroy() {
     document.body.style.background = '';

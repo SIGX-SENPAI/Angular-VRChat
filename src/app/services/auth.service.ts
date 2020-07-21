@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { UserModel } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -33,5 +33,20 @@ export class AuthService {
     let hoy = new Date();
     hoy.setSeconds( 3600 );
     localStorage.setItem('expira', hoy.getTime().toString() );
+  }
+
+  estaAutenticado(): boolean {
+    if (this.userToken.length < 2) {
+    return false;
+    }
+    const expira =  Number (localStorage.getItem('expira'));
+    const expiraDate = new Date();
+    expiraDate.setTime( expira );
+
+    if ( expiraDate > new Date()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
