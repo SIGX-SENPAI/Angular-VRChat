@@ -9,7 +9,7 @@
               required
               email
               />
-      <span *ngIf="f.submitted && f.controls['password'].errors" class="mb-1 text-danger">Contraseña incorrecta</span>
+      <span *ngIf="f.submitted && f.controls['password'].errors || wrongpass" class="mb-1 text-danger">Contraseña incorrecta</span>
         <input type="password"
               name="password"
               placeholder="password"

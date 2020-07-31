@@ -13,6 +13,9 @@ import { PromoComponent } from './components/promo/promo.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarDashComponent } from './components/shared/navbar-dash/navbar-dash.component';
+import { ProfileComponent } from './components/shared/profile/profile.component';
+import { FriendsComponent } from './components/shared/friends/friends.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FeaturesComponent,
     RegisterComponent,
     DashboardComponent,
+    NavbarDashComponent,
+    ProfileComponent,
+    FriendsComponent,
   ],
   imports: [
     BrowserModule,

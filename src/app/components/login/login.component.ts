@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   user: UserModel = new UserModel();
   remember = false;
+  wrongpass: boolean;
+
   constructor( private router: Router, private auth: AuthService) {
     document.body.style.background = 'rgb(104, 153, 216)';
     document.body.style.background = '-moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%)';
@@ -46,14 +48,14 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
     Swal.showLoading();
     this.auth.login(this.user).subscribe(resp => {
-      console.log(resp);
       Swal.close();
       if ( this.remember ) {
         localStorage.setItem('email', this.user.email);
       }
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/dashboard');
       }, (err) => {
         console.log(err.error.error.message);
+        this.wrongpass = true;
         Swal.fire({
           icon: 'error',
           title: 'Error al autenticar',

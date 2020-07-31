@@ -1,7 +1,7 @@
 
 <app-navbar *ngIf="login" (showNav)="login = $event" (showOut)="local = $event"></app-navbar>
 
-<div class="container" *ngIf="!local">
+<div *ngIf="!local">
   <router-outlet></router-outlet>
 </div>
 

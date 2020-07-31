@@ -9,9 +9,13 @@ import { map } from 'rxjs/operators';
 export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apikey = 'AIzaSyBbO4R6XrY4PYcL8OhVipof3hnKgHVK5b4';
+  private apikey = 'AIzaSyCmVzslAhB70qP6pdqMQTJXvLO--k_XNIY';
   private userToken;
   constructor( private http: HttpClient) { }
+
+  logout() {
+    localStorage.removeItem('token');
+  }
 
   login( user: UserModel ) {
     const authData = {
