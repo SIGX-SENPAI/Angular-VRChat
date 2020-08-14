@@ -16,6 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarDashComponent } from './components/shared/navbar-dash/navbar-dash.component';
 import { ProfileComponent } from './components/shared/profile/profile.component';
 import { FriendsComponent } from './components/shared/friends/friends.component';
+import { CrudProfileComponent } from './components/shared/crud-profile/crud-profile.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FriendsComponent } from './components/shared/friends/friends.component'
     NavbarDashComponent,
     ProfileComponent,
     FriendsComponent,
+    CrudProfileComponent,
   ],
   imports: [
     BrowserModule,

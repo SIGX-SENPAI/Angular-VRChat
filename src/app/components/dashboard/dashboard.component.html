@@ -1,6 +1,30 @@
-<app-navbar-dash></app-navbar-dash>
-<app-profile></app-profile>
-<p>dashboard works!</p>
-<button type="button" class="btn btn-outline-danger"
-        (click)="logout()">Salir</button>
-<app-friends></app-friends>
+<!--1. to do make the profile Marked-->
+<!--2. to do make the dashboard marked-->
+<!--3. to do make the friends column marked-->
+<!-- Gonna hide the main NAV BAR
+    and use the dashboard navbar-->
+
+<div>
+  <app-navbar-dash></app-navbar-dash>
+</div>
+<div class="container-fluid bg-warning">
+  <div class="row">
+
+    <div class="bg-dark col-2 ml-1">
+      <app-profile></app-profile>
+    </div>
+
+    <div class="bg-danger col">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, suscipit sequi molestias
+        cupiditate autem, odit dicta sit quia perspiciatis beatae temporibus vero voluptas iusto earum, quas reiciendis
+        eos commodi iure!</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minus, enim repudiandae suscipit asperiores aliquid dicta itaque voluptatem voluptates alias delectus! Assumenda totam fuga soluta mollitia quo, deleniti at harum.
+        </p>
+    </div>
+
+    <div class="bg-success float-right col-3 mr-1">
+      <app-friends></app-friends>
+    </div>
+  </div>
+</div>

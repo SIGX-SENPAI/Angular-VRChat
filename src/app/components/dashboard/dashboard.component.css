@@ -1,0 +1,17 @@
+#profile {
+  width: 20%;
+  /* display:inline-block; */
+}
+
+
+#dashboard {
+  width:40%;
+  margin-left: 10px;
+  /* display:inline-block; */
+}
+
+#friends {
+  width: 20%;
+  /* display:inline-block; */
+}
+
