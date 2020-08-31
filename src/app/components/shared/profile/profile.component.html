@@ -1,5 +1,37 @@
 <!-- Add User Data at this fields -->
-<img src="assets/img/test_pic.jpg" alt="Avatar user" width="78" height="56">
-<h3 class="text-primary text-profile-size mb-1">User Name</h3>
-<h3 class="text-white text-profile-size"><i>online/offline status</i></h3>
-<h3 class="text-white text-profile-size">User Status</h3>
+<div class="border border-primary rounded">
+    <img src="assets/img/test_pic.jpg" alt="Avatar user" width="78" height="56">
+    <h3 class="text-primary text-profile-size mb-1 mt-1">User Name</h3>
+    <h3 class="text-white text-profile-size"><i>online/offline status</i></h3>
+    <h3 class="text-white text-profile-size mt-1">User Status</h3>
+    <button class="btn btn-outline-info" [routerLink]="[{outlets: {profile: ['profile']}}]" [routerLinkActive]="'active'">Profile</button>
+
+
+</div>
+<div class="mt-1">
+  <div>
+    <!-- Location Number -->
+    <button class="btn btn-secondary btn-block mb-1">Friend Location N</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1">Download</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1">Worlds</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1">Avatars</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1">Account link</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1">Blocks & Mutes</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1"></button>
+  </div>
+  <div>
+    <button class="btn btn-secondary btn-block mb-1"></button>
+  </div>
+</div>
