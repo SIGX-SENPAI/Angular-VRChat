@@ -1,12 +1,12 @@
 <!-- Add User Data at this fields -->
-<div class="border border-primary rounded">
-    <img src="assets/img/test_pic.jpg" alt="Avatar user" width="78" height="56">
+<div class="border border-primary rounded mt-3 mb-3">
+  <div class="m-4">
+  <img src="assets/img/test_pic.jpg" alt="Avatar user" width="78" height="56">
     <h3 class="text-primary text-profile-size mb-1 mt-1">User Name</h3>
     <h3 class="text-white text-profile-size"><i>online/offline status</i></h3>
     <h3 class="text-white text-profile-size mt-1">User Status</h3>
-    <button class="btn btn-outline-info" [routerLink]="[{outlets: {profile: ['profile']}}]" [routerLinkActive]="'active'">Profile</button>
-
-
+    <button class="btn btn-outline-info btn-block mt-1 mb-2" [routerLink]="[{outlets: {profile: ['profile']}}]" [routerLinkActive]="'active'">Profile</button>
+  </div>
 </div>
 <div class="mt-1">
   <div>
@@ -29,9 +29,9 @@
     <button class="btn btn-secondary btn-block mb-1">Blocks & Mutes</button>
   </div>
   <div>
-    <button class="btn btn-secondary btn-block mb-1"></button>
+    <button class="btn btn-secondary mb-1">Mute</button>
   </div>
   <div>
-    <button class="btn btn-secondary btn-block mb-1"></button>
+    <button class="btn btn-secondary mb-1">Mic</button>
   </div>
 </div>
