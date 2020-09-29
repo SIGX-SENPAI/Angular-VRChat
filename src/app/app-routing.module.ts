@@ -10,7 +10,7 @@ import { CrudProfileComponent } from './components/shared/crud-profile/crud-prof
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'profile', component: CrudProfileComponent, outlet: 'profile'},
+  { path: 'dashboard/profile/:id', component: CrudProfileComponent},
   { path: 'community', component: CommunityComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
