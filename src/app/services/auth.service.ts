@@ -2,13 +2,11 @@ import { Injectable, OnInit } from '@angular/core';
 import { UserModel } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
-  private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
+  private url = 'https://identitytoolki t.googleapis.com/v1/accounts:';
   private apikey = 'AIzaSyCmVzslAhB70qP6pdqMQTJXvLO--k_XNIY';
   private userToken;
   constructor( private http: HttpClient) { }
