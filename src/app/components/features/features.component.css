@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap');
+
+h5{
+  margin: 0;
+  padding: 0;
+}
+
 .font-icon-title{
   font-family: Abel;
   font-size: 1.5rem;
@@ -7,3 +14,38 @@
   font-family: Abel;
   font-size: 1.2rem;
 }
+
+.features-background{
+  background-color: rgb(245, 245, 245);
+  padding: 50px 0px 0px 0px;
+}
+
+.features-header{
+  font-family: 'Dosis', sans-serif;
+}
+
+.features-title{
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 50.4px;
+}
+
+.features-subtitle{
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 27px;
+
+}
+
+.features-container{
+  padding: 90px 0px;
+
+}
+
+.feature-description-full-body{
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* Falta arreglar el el container de los features y eliminar uk innecesarios, no responsivo en tamaño portatilL */
